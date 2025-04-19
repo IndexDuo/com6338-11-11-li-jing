@@ -15,7 +15,7 @@ const makeTag = (tag) => (str) => `<${tag}>${str}</${tag}>`;
 // complete this function
 const makePoemHTML = () => {
     //use of both makeTag and pipe at least once
-    return "hi";
+    return pipe();
 };
 
 // attach a click event to #get-poem
