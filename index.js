@@ -9,7 +9,12 @@ const pipe = (...fns) => firstArg => fns.reduce((returnValue, fn) => fn(returnVa
 const makeTag = tag => str => `<${tag}>${str}</${tag}>`
 
 // complete this function
-const makePoemHTML = () => {}
+const makePoemHTML = () => {
+
+//use of both makeTag and pipe at least once
+
+
+}
 
 // attach a click event to #get-poem
 getPoemBtn.onclick = async function() {
