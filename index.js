@@ -15,8 +15,9 @@ const makeTag = (tag) => (str) => `<${tag}>${str}</${tag}>`;
 // complete this function
 const makePoemHTML = (poem) => {
     //use of both makeTag and pipe at least once
-    
+
     console.log(poem);
+    console.log(poem[0].title);
     return poem;
 };
 
