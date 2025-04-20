@@ -18,7 +18,7 @@ const makePoemHTML = (poem) => {
 
     console.log(poem);
     console.log(poem[0].title);
-    return poem;
+    return makeTag("h2")(poem[0].title);
 };
 
 // attach a click event to #get-poem
