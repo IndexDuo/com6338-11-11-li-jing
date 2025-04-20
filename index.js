@@ -35,8 +35,8 @@ const makePoemHTML = (poem) => {
         arr.forEach((item, index, arr) => {
             // console.log(item);
             if (item) {
-                // console.log(arr[index + 1]);
-                if (arr[index + 1] == "") {
+                console.log(arr[index + 1]);
+                if (arr[index + 1] != "") {
                     breakedPoemPara += item + "<br>";
                 } else {
                     breakedPoemPara += item;
@@ -52,7 +52,7 @@ const makePoemHTML = (poem) => {
             }
             // lineCount++;
         });
-        console.log(breakPoemSection);
+        // console.log(breakPoemSection);
         return breakPoemSection;
     };
 
