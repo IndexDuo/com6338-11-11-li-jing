@@ -18,7 +18,11 @@ const makePoemHTML = (poem) => {
 
     console.log(poem);
     console.log(poem[0].title);
-    return makeTag("h2")(poem[0].title);
+    const title = makeTag("h2")(poem[0].title);
+    const emphasis = makeTag("em")(poem[0].author);
+    const author = makeTag("h3")(emphsis);
+
+    return title;
 };
 
 // attach a click event to #get-poem
