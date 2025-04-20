@@ -30,6 +30,7 @@ const makePoemHTML = (poem) => {
         console.log(arr);
         var breakedPoemPara = "";
         var breakPoemSection = "";
+        const poemLength = arr.length;
         arr.forEach((line) => {
             // console.log(line);
             if (line) {
@@ -38,7 +39,7 @@ const makePoemHTML = (poem) => {
             } else if (line == "") {
                 breakPoemSection += makePipePoemP(breakedPoemPara);
                 breakedPoemPara = "";
-                console.log(breakPoemSection);
+                console.log(poemLength);
             }
         });
         // console.log(breakPoemSection);
