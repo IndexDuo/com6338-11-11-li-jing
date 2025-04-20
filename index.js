@@ -17,15 +17,24 @@ const makePoemHTML = (poem) => {
     //use of both makeTag and pipe at least once
 
     console.log(poem);
-    console.log(poem[0].title);
+    // console.log(poem[0].title);
     const makeh2 = makeTag("h2");
     const emphasize = makeTag("em");
     const makeh3 = makeTag("h3");
     const makep = makeTag("p");
+    const makeBreak = makeTag("br");
+    const breakPoem = (arr)=>{
 
-    console.log(pipe(makeh2(poem[0].title)));
-    // const poemHTML =
-    //     pipe(makeh2(poem[0].title)) + pipe(makeh3(emphasize(poem[0].author)));
+    }
+
+    const makeTitle = pipe(makeh2);
+    const makeAuthor = pipe(makeh3, emphasize);
+    const makePoemContent = pipe(makep);
+    // console.log(makeTitle(poem[0].title));
+    const poemHTML =
+        makeTitle(poem[0].title) +
+        makeAuthor(poem[0].author) +
+        makePoemContent(poem[0].lines[0]);
 
     return poemHTML;
 };
