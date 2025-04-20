@@ -35,7 +35,7 @@ const makePoemHTML = (poem) => {
         arr.forEach((line) => {
             // console.log(line);
             if (line) {
-                // console.log(line);
+                console.log(arr[poemLength].value);
                 breakedPoemPara += line + "<br>";
                 if (lineCount == poemLength - 1) {
                     breakPoemSection += makePipePoemP(breakedPoemPara);
