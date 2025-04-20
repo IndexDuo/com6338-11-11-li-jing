@@ -23,24 +23,28 @@ const makePoemHTML = (poem) => {
     const makeh3 = makeTag("h3");
     const makep = makeTag("p");
     const makeBreak = makeTag("br");
+
+    const makePipePoemP = pipe(makep);
+
     const breakPoem = (arr) => {
         console.log(arr);
         var breakedPoemPara = "";
-        var breakPoemSection = ""
+        var breakPoemSection = "";
         arr.forEach((line) => {
             if (line) {
                 breakedPoemPara += line + "\n";
-            }else{
-
+            } else {
+                breakPoemSection += makePipePoemP(breakedPoemPara) + "\n";
+                breakedPoemPara = "";
             }
         });
-        console.log(breakedPoem);
-        return breakedPoem;
+        console.log(breakPoemSection);
+        return breakPoemSection;
     };
 
     const makeTitle = pipe(makeh2);
     const makeAuthor = pipe(makeh3, emphasize);
-    const makePoemContent = pipe(breakPoem, makep);
+    const makePoemContent = pipe(breakPoem);
     // console.log(makeTitle(poem[0].title));
     const poemHTML =
         makeTitle(poem[0].title) +
