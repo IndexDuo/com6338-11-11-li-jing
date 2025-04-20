@@ -31,11 +31,14 @@ const makePoemHTML = (poem) => {
         var breakedPoemPara = "";
         var breakPoemSection = "";
         arr.forEach((line) => {
+            // console.log(line);
             if (line) {
+                console.log(line);
                 breakedPoemPara += line + "\n";
-            } else {
+            } else if (line == "") {
+                console.log(line);
                 breakPoemSection += makePipePoemP(breakedPoemPara);
-                // breakedPoemPara = "";
+                breakedPoemPara = "";
             }
         });
         console.log(breakPoemSection);
