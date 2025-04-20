@@ -31,24 +31,28 @@ const makePoemHTML = (poem) => {
         var breakedPoemPara = "";
         var breakPoemSection = "";
         const poemLength = arr.length;
-        var lineCount = 0;
-        arr.forEach((line) => {
-            // console.log(line);
-            if (line) {
-                console.log(arr[poemLength].value);
-                breakedPoemPara += line + "<br>";
-                if (lineCount == poemLength - 1) {
+        // var lineCount = 0;
+        arr.forEach((item, index, arr) => {
+            // console.log(item);
+            if (item) {
+                // console.log(arr[index + 1]);
+                if (arr[index + 1] == "") {
+                    breakedPoemPara += item + "<br>";
+                } else {
+                    breakedPoemPara += item;
+                }
+                if (index == poemLength - 1) {
                     breakPoemSection += makePipePoemP(breakedPoemPara);
                     // breakedPoemPara = "";
                 }
-            } else if (line == "") {
+            } else if (item == "") {
                 breakPoemSection += makePipePoemP(breakedPoemPara);
                 breakedPoemPara = "";
                 // console.log(poemLength);
             }
-            lineCount++;
+            // lineCount++;
         });
-        // console.log(breakPoemSection);
+        console.log(breakPoemSection);
         return breakPoemSection;
     };
 
