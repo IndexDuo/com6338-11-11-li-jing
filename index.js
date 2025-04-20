@@ -25,9 +25,14 @@ const makePoemHTML = (poem) => {
     const makeBreak = makeTag("br");
     const breakPoem = (arr) => {
         console.log(arr);
-        // arr.forEach((line) => {
-        //     return (line += "\n");
-        // });
+        var breakedPoem = "";
+        arr.forEach((line) => {
+            if (arr) {
+                breakedPoem += line + "\n";
+            }
+        });
+        console.log(breakedPoem);
+        return breakedPoem;
     };
 
     const makeTitle = pipe(makeh2);
