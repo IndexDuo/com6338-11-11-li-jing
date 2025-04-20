@@ -58,7 +58,7 @@ const makePoemHTML = (poem) => {
     // console.log(makeTitle(poem[0].title));
     const poemHTML =
         makeTitle(poem[0].title) +
-        makeAuthor(poem[0].author) +
+        makeAuthor("by " + poem[0].author) +
         makePoemContent(poem[0].lines);
 
     return poemHTML;
