@@ -31,16 +31,22 @@ const makePoemHTML = (poem) => {
         var breakedPoemPara = "";
         var breakPoemSection = "";
         const poemLength = arr.length;
+        var lineCount = 0;
         arr.forEach((line) => {
             // console.log(line);
             if (line) {
                 // console.log(line);
                 breakedPoemPara += line + "\n";
+                if (lineCount == poemLength - 1) {
+                    breakPoemSection += makePipePoemP(breakedPoemPara);
+                    // breakedPoemPara = "";
+                }
             } else if (line == "") {
                 breakPoemSection += makePipePoemP(breakedPoemPara);
                 breakedPoemPara = "";
                 console.log(poemLength);
             }
+            lineCount++;
         });
         // console.log(breakPoemSection);
         return breakPoemSection;
