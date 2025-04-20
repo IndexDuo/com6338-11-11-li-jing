@@ -34,7 +34,7 @@ const makePoemHTML = (poem) => {
             if (line) {
                 breakedPoemPara += line + "\n";
             } else {
-                breakPoemSection += makePipePoemP(breakedPoemPara) + "\n";
+                breakPoemSection += makePipePoemP(breakedPoemPara);
                 breakedPoemPara = "";
             }
         });
