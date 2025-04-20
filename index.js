@@ -23,15 +23,15 @@ const makePoemHTML = (poem) => {
     const makeh3 = makeTag("h3");
     const makep = makeTag("p");
     const makeBreak = makeTag("br");
-    const breakPoem = (arr)=>{
-      arr.forEach(line => {
-        
-      });
-    }
+    const breakPoem = (arr) => {
+        arr.forEach((line) => {
+            line += "\n";
+        });
+    };
 
     const makeTitle = pipe(makeh2);
     const makeAuthor = pipe(makeh3, emphasize);
-    const makePoemContent = pipe(makep);
+    const makePoemContent = pipe(breakPoem, makep);
     // console.log(makeTitle(poem[0].title));
     const poemHTML =
         makeTitle(poem[0].title) +
