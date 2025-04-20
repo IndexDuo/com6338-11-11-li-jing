@@ -18,9 +18,12 @@ const makePoemHTML = (poem) => {
 
     console.log(poem);
     console.log(poem[0].title);
-    const title = makeTag("h2")(poem[0].title);
-    const emphasis = makeTag("em")(poem[0].author);
-    const author = makeTag("h3")(emphsis);
+    const makeh2 = makeTag("h2");
+    const emphasize = makeTag("em");
+    const makeh3 = makeTag("h3");
+    const makep = makeTag("p");
+    
+    pipe()
 
     return title;
 };
