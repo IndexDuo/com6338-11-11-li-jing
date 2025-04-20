@@ -22,10 +22,11 @@ const makePoemHTML = (poem) => {
     const emphasize = makeTag("em");
     const makeh3 = makeTag("h3");
     const makep = makeTag("p");
-    
-    pipe()
 
-    return title;
+    const poemHTML =
+        pipe(makeh2(poem[0].title)) + pipe(makeh3(emphasize(poem[0].author)));
+
+    return poemHTML;
 };
 
 // attach a click event to #get-poem
