@@ -36,7 +36,7 @@ const makePoemHTML = (poem) => {
             // console.log(line);
             if (line) {
                 // console.log(line);
-                breakedPoemPara += line + "\n";
+                breakedPoemPara += line + "<br>";
                 if (lineCount == poemLength - 1) {
                     breakPoemSection += makePipePoemP(breakedPoemPara);
                     // breakedPoemPara = "";
