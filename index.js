@@ -23,8 +23,9 @@ const makePoemHTML = (poem) => {
     const makeh3 = makeTag("h3");
     const makep = makeTag("p");
 
-    const poemHTML =
-        pipe(makeh2(poem[0].title)) + pipe(makeh3(emphasize(poem[0].author)));
+    console.log(pipe(makeh2(poem[0].title)));
+    // const poemHTML =
+    //     pipe(makeh2(poem[0].title)) + pipe(makeh3(emphasize(poem[0].author)));
 
     return poemHTML;
 };
