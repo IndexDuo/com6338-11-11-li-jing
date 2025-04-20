@@ -24,9 +24,10 @@ const makePoemHTML = (poem) => {
     const makep = makeTag("p");
     const makeBreak = makeTag("br");
     const breakPoem = (arr) => {
-        arr.forEach((line) => {
-            line += "\n";
-        });
+        console.log(arr);
+        // arr.forEach((line) => {
+        //     return (line += "\n");
+        // });
     };
 
     const makeTitle = pipe(makeh2);
@@ -36,7 +37,7 @@ const makePoemHTML = (poem) => {
     const poemHTML =
         makeTitle(poem[0].title) +
         makeAuthor(poem[0].author) +
-        makePoemContent(poem[0].lines[0]);
+        makePoemContent(poem[0].lines);
 
     return poemHTML;
 };
