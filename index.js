@@ -44,7 +44,7 @@ const makePoemHTML = (poem) => {
             } else if (line == "") {
                 breakPoemSection += makePipePoemP(breakedPoemPara);
                 breakedPoemPara = "";
-                console.log(poemLength);
+                // console.log(poemLength);
             }
             lineCount++;
         });
