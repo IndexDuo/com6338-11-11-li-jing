@@ -36,7 +36,7 @@ const makePoemHTML = (poem) => {
             // console.log(item);
             if (item) {
                 console.log(arr[index + 1]);
-                if (arr[index + 1] != "") {
+                if (arr[index + 1] != "" && index != poemLength - 1) {
                     breakedPoemPara += item + "<br>";
                 } else {
                     breakedPoemPara += item;
