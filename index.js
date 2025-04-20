@@ -53,7 +53,7 @@ const makePoemHTML = (poem) => {
     };
 
     const makeTitle = pipe(makeh2);
-    const makeAuthor = pipe(makeh3, emphasize);
+    const makeAuthor = pipe(emphasize, makeh3);
     const makePoemContent = pipe(breakPoem);
     // console.log(makeTitle(poem[0].title));
     const poemHTML =
