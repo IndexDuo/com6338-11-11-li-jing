@@ -33,15 +33,15 @@ const makePoemHTML = (poem) => {
         arr.forEach((line) => {
             // console.log(line);
             if (line) {
-                console.log(line);
+                // console.log(line);
                 breakedPoemPara += line + "\n";
             } else if (line == "") {
-                console.log(line);
                 breakPoemSection += makePipePoemP(breakedPoemPara);
                 breakedPoemPara = "";
+                console.log(breakPoemSection);
             }
         });
-        console.log(breakPoemSection);
+        // console.log(breakPoemSection);
         return breakPoemSection;
     };
 
