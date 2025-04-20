@@ -25,10 +25,13 @@ const makePoemHTML = (poem) => {
     const makeBreak = makeTag("br");
     const breakPoem = (arr) => {
         console.log(arr);
-        var breakedPoem = "";
+        var breakedPoemPara = "";
+        var breakPoemSection = ""
         arr.forEach((line) => {
-            if (arr) {
-                breakedPoem += line + "\n";
+            if (line) {
+                breakedPoemPara += line + "\n";
+            }else{
+
             }
         });
         console.log(breakedPoem);
